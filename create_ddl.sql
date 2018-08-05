@@ -18,7 +18,4 @@ create table if not exists cats.cats(
 insert into cats.cats(birthday, breed, imageUrl, name, password, username, weight, lastSeenAt)
   values ( '2013-12-31', 'German Shepard', 'http://ibm.com', 'Jeff', 'ppp', 'jpercent', 100, CURRENT_TIMESTAMP);
 
-insert into cats.cats(birthday, breed, imageUrl, name, password, username, weight)
-  values ( '2013-12-31', 'German Shepard', 'http://ibm.com', 'Jeff', 'ppp', 'percent', 100);
-
 commit;

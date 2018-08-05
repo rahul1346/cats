@@ -9,9 +9,10 @@ var bcrypt = require('bcryptjs');
 var router = express.Router();
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password"
+  host     : "aai3bgg3l8ejjr.cfk8exrtrnay.us-west-2.rds.amazonaws.com",
+  user     : "root",
+  password : "password",
+  port     : "3306"
 });
 
 router.post('/register', function(req, res,next) {
@@ -181,6 +182,7 @@ router.post('/', verifyToken, function(req, res, next) {
 });
 
 router.get('/random', function(req, res, next) {
+  console.log('Random cat', con);
 	con.connect(function(query, err) {
     if (err) {
       console.log("Catching error here: ", err);
